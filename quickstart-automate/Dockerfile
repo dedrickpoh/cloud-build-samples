@@ -2,6 +2,6 @@ FROM golang:1.22
 
 WORKDIR /app
 
-COPY quickstart-automate ./quickstart-automate
+COPY . .
 
-CMD ["go", "run", "quickstart-automate/main.go"]
+CMD ["go", "run", "main.go"]
