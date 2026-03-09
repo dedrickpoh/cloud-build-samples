@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+
 # [START cloudbuild_quickstart_automate]
 options:
   logging: CLOUD_LOGGING_ONLY
@@ -26,8 +28,7 @@ steps:
         'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:latest',
         '.'
       ]
-
 # Push image automatically to Artifact Registry
 images:
   - 'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:latest'
-# [END cloudbuild_quickstart_automate]
+  # [END cloudbuild_quickstart_automate]
