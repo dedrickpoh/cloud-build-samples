@@ -19,16 +19,17 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 steps:
-  # Build Docker image from Dockerfile
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
         'build',
         '-t',
         'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:latest',
-        '.'
+        '-f',
+        'quickstart-automate/Dockerfile',
+        'quickstart-automate'
       ]
-# Push image automatically to Artifact Registry
+
 images:
   - 'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:latest'
   # [END cloudbuild_quickstart_automate]
